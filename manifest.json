@@ -1,11 +1,11 @@
 {
-  "name": "Pixel Creativo - Agência de Design",
-  "short_name": "Pixel Creativo",
-  "description": "Website institucional da agência de design Pixel Creativo.",
+  "name": "Alimentação com Liberdade",
+  "short_name": "Alim. Livre",
+  "description": "Site institucional sobre alimentação saudável, autonomia alimentar e liberdade à mesa.",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#333333",
+  "background_color": "#fff8e1",
+  "theme_color": "#ffb347",
   "orientation": "portrait-primary",
   "icons": [
     {
