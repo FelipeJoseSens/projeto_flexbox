@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Alimentação com Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo2.jpg" alt="Logo Alimentação com Liberdade" width="180">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <div class="container">
+                <h2>Como posso te ajudar?</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="images/service1.jpg" alt="Atendimento Nutricional Individualizado">
+                        <h3>Atendimento Nutricional</h3>
+                        <p>Consultas personalizadas para você conquistar autonomia alimentar, respeitando seu corpo e sua rotina.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service2.jpg" alt="Oficinas e Workshops">
+                        <h3>Oficinas e Workshops</h3>
+                        <p>Encontros práticos e teóricos sobre alimentação intuitiva, mindful eating e liberdade alimentar.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service3.jpg" alt="Acompanhamento Online">
+                        <h3>Acompanhamento Online</h3>
+                        <p>Suporte contínuo e flexível para você evoluir no seu tempo, de onde estiver.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alimentação com Liberdade. Todos os direitos reservados.</p>
+            <p>Feito com carinho para sua saúde e bem-estar.</p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('.main-nav ul');
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

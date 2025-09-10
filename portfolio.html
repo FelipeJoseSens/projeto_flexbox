@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Alimentação com Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo2.jpg" alt="Logo Alimentação com Liberdade" width="180">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="portfolio">
+            <div class="container">
+                <h2>Transformações Reais</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="images/service4.jpg" alt="Depoimento 1">
+                        <h3>"Aprendi a comer sem culpa!"</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/service5.jpg" alt="Depoimento 2">
+                        <h3>"Hoje me sinto livre para escolher o que comer."</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/service6.jpg" alt="Depoimento 3">
+                        <h3>"Minha relação com a comida mudou totalmente."</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/service7.jpg" alt="Depoimento 4">
+                        <h3>"Descobri o prazer de comer com atenção."</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/service8.jpg" alt="Depoimento 5">
+                        <h3>"Acompanhamento acolhedor e sem julgamentos."</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alimentação com Liberdade. Todos os direitos reservados.</p>
+            <p>Feito com carinho para sua saúde e bem-estar.</p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('.main-nav ul');
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

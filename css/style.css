@@ -1,0 +1,290 @@
+/* --- Reset Básico e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffb347;
+    --secondary-color: #ffcc33;
+    --dark-color: #3e2723;
+    --light-color: #fff8e1;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho e Navegação --- */
+.main-header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main-header .container {
+    display: flex; /* ATIVANDO FLEXBOX */
+    justify-content: space-between; /* Espaço entre os itens (logo e nav) */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* ATIVANDO FLEXBOX para os itens do menu */
+    gap: 20px; /* Espaço entre os itens do menu */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Menu Mobile --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        z-index: 20;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 180px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        gap: 0;
+        border-radius: 0 0 8px 8px;
+        padding: 10px 0;
+        align-items: flex-start;
+    }
+    .main-nav ul.open {
+        display: flex;
+    }
+    .main-nav ul li {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .main-nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: var(--dark-color);
+        font-size: 1.1rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .main-nav ul li a:hover {
+        background: var(--light-color);
+        color: var(--primary-color);
+    }
+    .main-header .container {
+        position: relative;
+    }
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background-image: linear-gradient(rgba(255,186,73,0.55), rgba(255,204,51,0.35)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--dark-color);
+    height: 60vh;
+    display: flex; /* FLEXBOX para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(62,39,35,0.7), 0 1px 0 #ffb347;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(62,39,35,0.7);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s;
+    border: none;
+    box-shadow: 0 2px 8px rgba(62,39,35,0.15);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* --- Seção de Serviços --- */
+.services {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: flex; /* ATIVANDO FLEXBOX PARA O GRID */
+    gap: 30px; /* Espaço entre os cartões */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255,186,73,0.08);
+    overflow: hidden;
+    max-width: 320px; /* Largura máxima de cada cartão */
+    flex: 1; /* Permite que os cartões cresçam se houver espaço */
+    min-width: 280px; /* Largura mínima antes de quebrar a linha */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3, .service-card p {
+    padding: 1rem;
+}
+
+.service-card h3 {
+    padding-bottom: 0.5rem;
+}
+
+/* --- Portfólio --- */
+.portfolio {
+    padding: 4rem 0;
+    background: var(--light-color);
+    text-align: center;
+}
+.portfolio-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255,186,73,0.08);
+    overflow: hidden;
+    max-width: 320px;
+    min-width: 220px;
+    flex: 1;
+    margin-bottom: 20px;
+}
+.portfolio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.portfolio-item h3 {
+    padding: 1rem;
+}
+
+/* --- Contato --- */
+.contact {
+    padding: 4rem 0;
+    background: var(--light-color);
+    text-align: center;
+}
+.contact .btn {
+    margin-top: 1.5rem;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column; /* Itens empilhados */
+    gap: 5px;
+}
+
+/* --- Design Responsivo (Media Queries) --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column; /* Empilha o logo e o menu em telas pequenas */
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* O Flexbox no .services-grid já cuida do layout dos cartões naturalmente,
+       mas podemos ajustar outras coisas se necessário. */
+}
